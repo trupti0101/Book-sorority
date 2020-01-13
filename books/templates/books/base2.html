@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Book Sorority</title>
+        {% load static %}
+        <link rel="stylesheet" type='text/css' href="{% static 'main.css' %}" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="header">
+            <h1>Book Sorority</h1>
+        </div>
+        
+        <div class="topnav">
+            <a href="{% url 'index' %}">Home</a>
+            <a href="/books/show">Show All Books</a>
+          {% if user.is_authenticated %}
+            <a href="{% url 'books_list' %}">My Account</a>
+          {% else %}
+            <a href="/logintestapp/login">Login</a>
+          {% endif %}
+        </div>
+        
+        <div class="searchBar">
+            <form method="get" enctype="multipart/form-data" action="{% url 'searchbox' %}">
+                <input type="text" name="key" placeholder="Search..."/>
+            </form>
+        </div>
+        
+    		{% block content %}
+    		{% endblock %}
+
+        <div class="bottom"></div>
+        <div class="footer">
+            <div class="welcome">
+                {% if user.is_authenticated %}
+                    Welcome {{user.username}}!
+                {% else %}
+                    You are not Logged in.
+                {% endif %}
+            </div>
+            <a href="{% url 'aboutus' %}">Contact Us</a>
+          {% if user.is_authenticated %}
+            <a href="/logintestapp/confirmlogout">LogOut</a>
+          {% endif %}
+        </div>
+        
+    </body>
+</html>

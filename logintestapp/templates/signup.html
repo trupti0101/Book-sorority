@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+    {% block content %}
+      <div class="main">
+        <p class="sign" align="center">Sign Up</p>
+        <form class="form1" action="{% url 'register' %}" method="post">
+            {% csrf_token %}
+
+            {{ form.username }}
+            <div class="error"> {{ form.username.errors }} </div>
+
+            {{ form.password1 }}
+            <div class="error"> {{ form.password1.errors }} </div>
+
+            {{ form.password2 }}
+            <div class="error"> {{ form.password2.errors }} </div>
+
+            {{ form.email }}
+            <div class="error"> {{ form.email.errors }} </div>
+
+            <input type="submit" name="signup" value="Register"/>
+            <br/><br/><br/>
+            <a class="submit" href="/books/">< Home </a>
+      </div>
+    {% endblock %}

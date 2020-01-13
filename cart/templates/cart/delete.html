@@ -1,0 +1,16 @@
+{% extends 'books/base.html' %}
+    {% block content %}
+        
+    <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="details">
+                <table>
+                    <th colspan="2">{{msg}} Continue?</th>
+                    <tr></div>
+                        <td><div class="yes"><input type="submit" name="yes" value="Yes"/></div></td>
+                        <td><div class="no"><a href="{% url 'notify' %}">No</a></div></td>
+                    </tr>
+                </table>
+        </form>
+
+    {% endblock %}

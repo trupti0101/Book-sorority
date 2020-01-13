@@ -1,0 +1,22 @@
+{% extends 'books/base.html' %}
+    {% block content %}
+        
+        <div class="details">
+            <table>
+                <th>Buyer</th>
+                <th>Book</th>
+                <th>Email-ID</th>
+                <th>Delete Book</th>
+                <th>Delete Notification</th>    
+        {% for notify in n %}
+                <tr>
+                    <td>{{ notify.buyer.username }}</td>
+                    <td>{{ notify.book.name }}</td>
+                    <td><a href="mailto:{{ notify.buyer.email }}?subject=Regarding selling '{{notify.book.name}}'&body=I am interested in selling the book as you requested on 'Book Sorority'. Reply me to buy the book. Contact me on <contact no>">{{ notify.buyer.email }}</a></td>
+                    <td><a href="/cart/delete?b={{notify.book.id}}">Sold</a></td>
+                    <td><a href="/cart/deletenotification?b={{notify.book.id}}">Not Selling</a></td>
+                </tr>
+        {% endfor %}
+            </table>
+        </div>
+    {% endblock %}

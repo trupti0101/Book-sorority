@@ -1,0 +1,15 @@
+{% extends 'books/base.html' %}
+    {% block content %}
+        
+    <div class="details">
+        <table>
+            <th colspan="2">
+                Notification sent to {{ item.user.username }}</br>
+                Contact them at <a href="mailto:{{ item.user.email }}?subject=Regarding buying '{{item.name}}'&body=I am interested in buying the book from 'Book Sorority'. Reply me to sell the book. Contact me on <contact no>"">{{ item.user.email }}</a>
+            </th>
+            <tr></div>
+                <td><div class="yes"><a href="/books/show">Continue Shopping</a></div></td>
+            </tr>
+        </table>
+
+    {% endblock %}

@@ -1,0 +1,19 @@
+{% extends 'books/base.html' %}
+    {% block content %}
+    <h2>Book Delete</h2>
+	<form method="post">
+		{% csrf_token %}
+		<p>Are you sure you want to delete <b>"{{ books.name }}"</b> by <b>"{{ books.author }}"</b> ? <br/>
+		<img src="{{ MEDIA_URL }}{{ books.image }}"></p>
+		<div class="details">
+		<table>
+			<tr>
+				<td width="40%"></td>
+				<td colspan="2" align="center"><div class="yes"><input type="submit" value="Yes" /></div></td>
+				<td><div class="linkText"><div class="no"><a href="{% url "books_view" books.id %}">No</a></div></td>
+				<td width="30%"></td>
+			</tr>
+		</table>
+	</div>
+	</form>
+	{% endblock %}

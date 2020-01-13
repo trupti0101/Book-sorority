@@ -1,0 +1,413 @@
+body{
+  background-color: white;
+}
+
+.header {
+  background-image: url("./images/3.jpg");
+  background-size: 100%;
+  color: rgb(255, 255, 255);
+  font-family: "Broadway", "Serif";
+  font-size: 35px;
+  font-weight: bold;
+  text-align: left;
+  padding: 40px;
+}
+
+.index img{
+    width: 100%;
+    padding-bottom: 20px;
+    display: block;
+}
+
+h2{
+    text-align: center;
+    color: #47200C;
+}
+
+p{
+    text-align: center;
+    font-size: 18px;
+}
+p img{
+  padding-top: 30px;
+  height: 300px;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: rgb(0,0,0);
+}
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.topnav a:hover {
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+.searchBar {
+  overflow: hidden;
+  background-color: #F1F1F1;
+  text-align: right;
+  padding: 20px 20px;
+}
+.searchBar input {
+  height: 30px;
+  width: 250px;
+  font-size: 15pt;
+  text-align: left;
+  background-color: white;
+  border: 2px solid darkgray;
+  position: relative;
+  right: 80px;
+}
+.details .crossIcon img{
+    height: 20px;
+}
+
+.details h2{
+    padding-bottom: 12px;
+    padding-top: 12px;
+    font-size: 30px;
+}
+.details table{
+    font-family: 'Trebuchet MS', 'Arial', 'Hevetica';
+    text-align: center;
+    width: 100%;
+    border-collapse: collapse;
+}
+.details table th{
+    height: 50px;
+    background-color: lightcyan;
+    font-size: 25px;
+    border: 1px #ddd solid;
+}
+.details table td{
+    border: 1px #ddd solid;
+    padding: 8px;
+    height: 40px;
+}
+.details textarea{
+  width: 70%;
+  height: 80px;
+  font-size: 18px;
+  padding: 12px 10px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+.details input[type='text'], input[type='email'], input[type='number'], input[type='file'], .details input[type='password'], select, option {
+  width: 70%;
+  height: 40px;
+  font-size: 18px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+.details input[type='text'], input[type='email'], input[type='number'], .details input[type='password'] {
+    padding: 6px 10px;
+}    
+.details tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+.details input[type='submit'], .details input[type='reset']{
+  padding: 15px 32px;
+  font-size: 18px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #333;
+  color: white;
+  resize: none;
+}
+.details input[type='submit']:hover, .details input[type='reset']:hover{
+  border: 2px solid #ccc;
+  background-color: white;
+  color: #333;
+  resize: none;
+}
+.details img{
+    height: 150px;
+}
+.yes a, .yes input[type='submit']{
+  font-size: 18px;
+  padding: 15px 32px;
+  border: none;
+  border-radius: 0px;
+  box-sizing: border-box;
+  background-color: green;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  resize: none;
+}
+.yes a:hover, .yes input[type='submit']:hover{
+    background-color: white;
+    color: green;
+    border: 2px green solid;
+    padding: 13px 30px;
+}
+.no a{
+  font-size: 18px;
+  border-radius: 0px;
+  box-sizing: border-box;
+  background-color: red;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  resize: none;
+  padding: 15px 32px;
+}
+.no a:hover{
+    background-color: white;
+    color: red;
+    border: 2px red solid;
+    padding: 13px 30px;
+}
+.linkText a{
+  font-size: 16px;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  background-color: black;
+  padding: 15px 32px;
+  display: inline-block;
+}
+.linkText a:hover{
+  color: black;
+  background-color: white;
+  border: 2px black solid;
+  padding: 13px 30px;
+}
+
+.column {
+  float: left;
+  width: 31%;
+  padding-top: 120px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 70px;
+  text-align: center;
+}
+.column h2{
+    color: lightcyan;
+    padding-bottom: 20px;
+    font-size: 30px;
+}
+.column ul li{
+    display: block;
+    text-align: left;
+    padding-left: 90px;
+    padding-top: 10px;
+}
+.column a{
+  font-size: 20px;
+  display: block;
+  color: white;
+  font: "CM Typewriter";
+  font-weight: bold;
+  text-decoration: none;
+}
+.column a:hover{
+  color: gray;
+}
+.row{
+  position: absolute;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%; 
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  padding-bottom: 100px;
+}
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+.container img{
+    width: 100%;
+}
+.containee{
+  position: absolute;
+  top: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding-bottom: 200px;
+  overflow: hidden;
+}
+.containee h2{
+    padding-top: 40px;
+    color: lightcyan;
+}
+.containee a{
+    color: lightcyan;
+}
+.containee a:hover{
+    color: gray;
+}
+
+.column2 {
+  float: left;
+  width: 31%;
+  padding-top: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-bottom: 60px;
+  text-align: center;
+}
+.column2 h2{
+    color: darkred;
+    padding-bottom: 20px;
+    font-size: 30px;
+}
+.column2 ul li{
+    display: block;
+    text-align: left;
+    padding-left: 90px;
+    padding-top: 10px;
+}
+.column2 a{
+  font-size: 20px;
+  display: block;
+  color: white;
+  font: "CM Typewriter";
+  font-weight: bold;
+  text-decoration: none;
+}
+.column2 img{
+    width: 40%;
+    height: 40%;
+}
+.row2{
+  background-color: white;
+  content: "";
+  display: table;
+  clear: both;
+}
+.row2:after {
+  content: "";
+  display: table;
+  clear: both;
+  padding-bottom: 150px;
+}
+@media screen and (max-width: 600px) {
+  .column2 {
+    width: 100%;
+  }
+}
+
+.bookList th, td {
+  font-size: 20px;
+  border-bottom: 1px solid #ddd;
+}
+.bookList td{
+    text-align: center;
+}
+.bookList table{
+    width: 100%;
+    padding-left: 10px;
+    border-collapse: collapse;
+}
+.bookList th{
+  height: 50px;
+  text-align: center;
+  background-color: lightcyan;
+}
+.bookList tr, td, th {
+    padding: 15px;
+}
+.bookList .icon img{
+  height: 50px;
+}
+.bookList .soldicon img{
+  height: 70px;
+}
+.bookList .detailImage img{
+  height: 500px;
+}
+.bookList td img{
+  height: 150px;
+}
+
+.containee table{
+    width: 100%;
+    padding-left: 500px;
+    padding-right: 350px;
+}
+.containee td input[type=text], input[type=password]{
+    width: 500px;
+    height: 25px;
+}
+.containee td input[type=submit], input[type=reset]{
+  background-color: darkslategray;
+  border: none;
+  color: lightgrey;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+.containee tr, td, th {
+    text-align: left;
+    font-size: 18px;
+    padding: 5px;
+}
+.containee table a{
+    display: block;
+    color: lightslategray;
+    text-decoration: none;
+}
+
+.bottom{
+  height: 150px;
+}
+.footer {
+  overflow: hidden;
+  background-color: #F1F1F1;
+  position: fixed;
+  bottom: 0px;
+  right: 8px;
+  left: 8px;
+  text-align: center;
+}
+.footer .welcome {
+  color: darkslategray;
+  font-size: 20px;
+  float: left;
+  padding-top: 10px;
+  padding-left: 20px;
+}
+.footer a {
+  float: right;
+  display: block;
+  color: lightslategray;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.footer a:hover {
+  background-color: rgb(0,0,0);
+  color: #f2f2f2;
+}

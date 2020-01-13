@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf­8">
+        <title>Manage My Books</title>
+        {% load static %}
+        <link rel="stylesheet" type='text/css' href="{% static 'details.css' %}" />
+    </head>
+    <body>
+        <div class="main">
+        <p class="sign" align="center">Add Book</p>
+        <form class="form1" enctype="multipart/form-data" action="" method="post">
+            {% csrf_token %}
+
+            {{ form.name }}
+            {{ form.author }}
+            {{ form.genre }}
+            <div class="uploadImage"><div class="ph">Image: </div>{{ form.image }}</div>
+            {{ form.edition }}
+            {{ form.isbn }}
+            {{ form.price }}
+            {{ form.publisher }}
+            {{ form.publishyear }}
+
+            <input type="submit" name="signup" value="Upload"/>
+        </div>
+        </form>
+    </body>
+</html>

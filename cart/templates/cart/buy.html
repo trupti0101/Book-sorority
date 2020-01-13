@@ -1,0 +1,21 @@
+{% extends 'books/base.html' %}
+    {% block content %}
+        
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="details">
+                <table>
+                    {% if sent %}
+                        <tr><td colspan='2'>Already sent a notification.</td></tr>
+                        <tr><td><div class="yes"><a href="/books/show">Continue Shopping</a></div></td></tr>
+                    {% else %}
+                    <th colspan="2">Buy Now?</th>
+                    <tr>
+                        <td><div class="yes"><input type="submit" name="yes" value="Yes"/></div></td>
+                        <td><div class="no"><a href="{% url 'show_books' %}">No</a></div></td>
+                    </tr>
+                    {% endif %}
+                </table>
+            </div>
+        </form>
+    {% endblock %}

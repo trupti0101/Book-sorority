@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+    {% block content %}
+    <div class="main">
+        <br/><br/><br/><p class="sign" align="center">Sign in</p><br/>
+        <form class="form1" action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+            {% for message in messages %}
+                <div class="errorLogin">{{ message }}</div><br/><br/>
+            {% endfor %}
+            <input name="username" type="text" align="center" placeholder="Username">
+            <input name="password" type="password" align="center" placeholder="Password"><br/><br/><br/>
+            <input type="submit" name="login" value="Login"/><br/><br/><br/>
+            <a class="submit" href="/books/">Home</a><br/><br/><br/><br/>
+            <p class="create" align="center"><a href="{% url 'register' %}">Create Account</p>
+        </form>
+    </div>
+    {% endblock %}

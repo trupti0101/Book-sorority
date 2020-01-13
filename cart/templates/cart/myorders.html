@@ -1,0 +1,30 @@
+{% extends 'books/base2.html' %}
+    {% block content %}
+          <div class="bookList">
+            <table>
+                <tr>
+                    <th>Book Title</th>
+                    <th>View Book</th>
+                    <th>Book Cover</th>
+                    <th>Price</th>
+                    <th>Seller </th>
+                </tr>
+                {% for c in cart %}
+                    <tr>
+                    <td>{{ c.book.name }}</td>
+                    <td>
+                        <a href="{% url "books_view" c.book.id %}">
+                            <div class="icon">
+                                <img src="/static/images/view.png"/>
+                            </div>
+                        </a>
+                    </td>
+                    <td><img src='{{ MEDIA_URL }}{{ c.book.image }}' height="200px"></td>
+                    <td>Rs. {{ c.book.price }}</td>
+                    <td>{{ c.book.user.username }}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+          </div><br/>
+    {% endblock %}
+            

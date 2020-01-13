@@ -1,0 +1,39 @@
+{% extends 'books/base2.html' %}
+    {% block content %}
+          <div class="bookList">
+            <table>
+                <tr>
+                    <th>Book Title</th>
+                    <th>Author Name</th>
+                    <th>View Book</th>
+                    <th>Book Cover</th>
+                    <th>Price</th>
+                    <th>Buy </th>
+                </tr>
+                {% for book in query_results %}
+                {% if book.sold == 0 %}
+                    <tr>
+                    <td>{{ book.name }}</td>
+                    <td>{{ book.author }}</td>
+                    <td>
+                        <a href="{% url "books_view" book.id %}">
+                            <div class="icon">
+                                <img src="/static/images/view.png"/>
+                            </div>
+                        </a>
+                    </td>
+                   
+                    <td><img src='{{ MEDIA_URL }}{{ book.image }}' height="200px"></td>
+                    <td>Rs. {{ book.price }}</td>
+                    <td>
+                        <a href="/cart/buy?bid={{book.id}}&sid={{book.user_id}}">
+                            <div class="icon"><img src="/static/images/addc.png"/></div>
+                        </a>
+                    </td>
+                    </tr>
+                {% endif %}
+                {% endfor %}
+            </table>
+          </div><br/>
+    {% endblock %}
+            

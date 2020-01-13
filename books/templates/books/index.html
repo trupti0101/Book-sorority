@@ -1,0 +1,48 @@
+{% extends 'books/base2.html' %}
+    {% block content %}
+        
+        <div class="container">
+        {% load static %}
+            <img src="{% static 'images/7.jpg' %}" height="672px"/>
+            <div class="row">
+                <div class="column">
+                  <h2>Literature & Fiction</h2><br/>
+                  <ul>
+                      <li><a href="search?g=romance">Romance</a></li>
+                      <li><a href="search?g=biography">Biography</a></li>
+                      <li><a href="search?g=novel">Novel</a></li>
+                      <li><a href="search?g=fantasy">Fantasy</a></li>
+                      <li><a href="#">Crime & Thriller</a></li>
+                      <li><a href="#">Science Fiction Fantasy</a></li>
+                      <li><a href="#">More</a></li>
+                  </ul>
+                </div>
+
+                <div class="column">
+                  <h2>Academic & Professional TextBooks</h2>
+                  <ul>
+                      <li><a href="search?g=computer">Computer & Internet</a></li>
+                      <li><a href="#">Science & Technology</a></li>
+                      <li><a href="#">Law</a></li>
+                      <li><a href="#">Medical</a></li>
+                      <li><a href="#">Engineering</a></li>
+                      <li><a href="#">References</a></li>
+                      <li><a href="#">More</a></li>
+                  </ul>
+                </div>
+
+                <div class="column">
+                  <h2>Kids & Teen's Collection</h2><br/>
+                  <ul>
+                      <li><a href="#">Knowledge & Learning</a></li>
+                      <li><a href="search?g=fun">Fun & Games</a></li>
+                      <li><a href="search?g=comic">Commics</a></li>
+                      <li><a href="#">Activity</a></li>
+                      <li><a href="#">Picture</a></li>
+                      <li><a href="#">Literature & Fiction</a></li>
+                      <li><a href="#">More</a></li>
+                  </ul>
+                </div>
+            </div>
+	      </div>
+    {% endblock %}

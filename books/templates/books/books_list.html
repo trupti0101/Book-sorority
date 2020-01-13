@@ -1,0 +1,35 @@
+{% extends 'books/base.html' %}
+    {% block content %}
+        <h2>Books Added:</h2>
+          <div class="bookList">
+            <table>
+                <tr>
+                    <th>Book Title</th>
+                    <th>Author Name</th>
+                    <th>View Book</th>
+                    <th>Edit Book</th>
+                    <th>Delete Book</th>
+                    <th>Book Cover</th>
+                    <th>Price</th>
+                </tr>
+                {% for book in object_list %}
+                {%if book.user_id == user.id %}
+                    <tr>
+                    <td>{{ book.name }}</td>
+                    <td>{{ book.author }}</td>
+                    {% if book.sold == 1 %}
+                    <td colspan="3"><div class="soldicon"><img src="/static/images/sold.jpg"/></div></td>
+                    {% else %}
+                    <td><a href="{% url "books_view" book.id %}"><div class="icon"><img src="/static/images/view.png"/></div></a></td>
+                    <td><a href="{% url "books_edit" book.id %}"><div class="icon"><img src="/static/images/edit.png"/></div></a></td>
+                    <td><a href="{% url "books_confirm_delete" book.id %}"><div class="icon"><img src="/static/images/delete.png"/></div></a></td>
+                    {% endif %}
+                    <td><img src='{{ MEDIA_URL }}{{ book.image }}' height="200px"></td>
+                    <td>Rs. {{ book.price }}</td>
+                    </tr>
+                {%endif%}
+                {% endfor %}
+            </table>
+          </div><br/>
+    {% endblock %}
+            

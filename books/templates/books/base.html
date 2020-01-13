@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Book Sorority</title>
+        {% load static %}
+        <link rel="stylesheet" type='text/css' href="{% static 'main.css' %}" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="header">
+            <h1>Book Sorority</h1>
+        </div>
+        
+        <div class="topnav">
+            <a href="{% url 'index' %}">Home</a>
+            <a href="/cart/notify">Notifications</a>
+            <a href="{% url 'myorders' %}">My Orders</a>
+            <a href="{% url 'books_list' %}">View My Books</a>
+            <a href="{% url 'books_new' %}">Add Book</a>
+        </div>
+        
+    		{% block content %}
+    		{% endblock %}
+
+        <div class="bottom"></div>
+        <div class="footer">
+            <div class="welcome"> {% if user.is_authenticated %} Welcome {{user.username}}! {% else %} You are not Logged in.{% endif %}</div>
+            <a href="#">Contact Us</a>
+            <a href="/logintestapp/confirmlogout">LogOut</a>
+        </div>
+    </body>
+</html>
